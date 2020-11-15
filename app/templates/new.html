@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+{% block content %}
+<form action="/heightsAndWeights/new" method="POST">
+    <div class="row">
+        <div class="col">
+            <label for="heightInches">Height in Inches</label>
+            <input id="heightInches" type="text" class="form-control" placeholder="Height" name="heightInches">
+        </div>
+        <div class="col">
+            <label for="weightPounds">Weight in Pounds</label>
+            <input id="weightPounds" type="text" class="form-control" placeholder="Weight" name="weightPounds">
+        </div>
+    </div>
+    <button type="submit" class="btn btn-success">
+        Create
+    </button>
+
+</form>
+
+{% endblock %}

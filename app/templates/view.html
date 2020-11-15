@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="card; m-5 p-2">
+    <h5 class="card-title">{{ heightAndWeight.heightInches }} - {{ heightAndWeight.weightPounds }}</h5>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">Height: {{ heightAndWeight.heightInches }}</li>
+        <li class="list-group-item">Weight: {{ heightAndWeight.weightPounds }}</li>
+    </ul>
+    <div class="card-body">
+        <a href="/edit/{{heightAndWeight.id}}" class="card-link btn btn-primary">edit</a>
+    </div>
+</div>
+<form action="/delete/{{heightAndWeight.id}}" method="post">
+    <button type="submit" class="btn btn-danger">
+        Delete
+    </button>
+</form>
+{% endblock %}
